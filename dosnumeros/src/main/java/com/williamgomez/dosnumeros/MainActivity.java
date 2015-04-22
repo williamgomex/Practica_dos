@@ -1,5 +1,6 @@
 package com.williamgomez.dosnumeros;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -27,21 +29,40 @@ public class MainActivity extends ActionBarActivity {
         final Button bcalcular= (Button) findViewById(R.id.bcalcular);
         final TextView ttotal= (TextView) findViewById(R.id.ttotal);
 
+        Context context = getApplicationContext();
+        CharSequence text = "Ingrese todos los campos";
+        int duration = Toast.LENGTH_SHORT;
+
+        final Toast toast = Toast.makeText(context, text, duration);
+
+
+
+
         bcalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(rsuma.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())+Float.parseFloat(enumero2.getText().toString())));
+                if(!enumero1.getText().toString().isEmpty()&&!enumero2.getText().toString().isEmpty())
+                {
+                    if(rsuma.isChecked()==true){
+                        ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())+Float.parseFloat(enumero2.getText().toString())));
+                    }
+                    else if(rresta.isChecked()==true){
+                        ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())-Float.parseFloat(enumero2.getText().toString())));
+                    }
+                    else if(rmul.isChecked()==true){
+                        ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())*Float.parseFloat(enumero2.getText().toString())));
+                    }
+                    else if(rdiv.isChecked()==true){
+                        ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())/Float.parseFloat(enumero2.getText().toString())));
+                    }
                 }
-                else if(rresta.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())-Float.parseFloat(enumero2.getText().toString())));
+                else
+                {
+                    ttotal.setText(Float.toString(0));
+                    toast.show();
                 }
-                else if(rmul.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())*Float.parseFloat(enumero2.getText().toString())));
-                }
-                else if(rdiv.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(enumero1.getText().toString())/Float.parseFloat(enumero2.getText().toString())));
-                }
+
+
             }
         });
 

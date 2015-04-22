@@ -1,5 +1,6 @@
 package com.williamgomez.figuras;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -29,19 +31,54 @@ public class MainActivity extends ActionBarActivity {
         final TextView ttotal = (TextView) findViewById(R.id.ttotal);
         final Button bcal = (Button) findViewById(R.id.bcalcular);
 
+        Context context = getApplicationContext();
+        CharSequence text = "Ingrese todos los campos";
+        int duration = Toast.LENGTH_SHORT;
+
+        final Toast toast = Toast.makeText(context, text, duration);
+
+
         bcal.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 if(rtriang.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(ebase.getText().toString())*Float.parseFloat(ealtura.getText().toString())/2));
+                    if(!ebase.getText().toString().isEmpty()&&!ealtura.getText().toString().isEmpty())
+                    {
+                        ttotal.setText(Float.toString((Float.parseFloat(ebase.getText().toString())*Float.parseFloat(ealtura.getText().toString()))/2));
+                    }
+                    else
+                    {
+                        ttotal.setText(Float.toString(0));
+                        toast.show();
+                    }
                 }
                 if(rrect.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(ebase.getText().toString())*Float.parseFloat(ealtura.getText().toString())));
+                    if(!ebase.getText().toString().isEmpty()&&!ealtura.getText().toString().isEmpty()){
+                        ttotal.setText(Float.toString(Float.parseFloat(ebase.getText().toString())*Float.parseFloat(ealtura.getText().toString())));
+                    }
+                    else{
+                        ttotal.setText(Float.toString(0));
+                        toast.show();
+                    }
                 }
                 if(rcuad.isChecked()==true){
-                    ttotal.setText(Float.toString(Float.parseFloat(elado.getText().toString())*Float.parseFloat(elado.getText().toString())));
+                    if(!elado.getText().toString().isEmpty()){
+                        ttotal.setText(Float.toString(Float.parseFloat(elado.getText().toString())*Float.parseFloat(elado.getText().toString())));
+                    }
+                    else
+                    {
+                        ttotal.setText(Float.toString(0));
+                        toast.show();
+                    }
                 }
                 if(rcirc.isChecked()==true){
-                    ttotal.setText(Float.toString( (float)(Math.pow(Float.parseFloat(eradio.getText().toString()),2)*Math.PI) ));
+                    if(!eradio.getText().toString().isEmpty()){
+                        ttotal.setText(Float.toString( (float)(Math.pow(Float.parseFloat(eradio.getText().toString()),2)*Math.PI) ));
+                    }
+                    else
+                    {
+                        ttotal.setText(Float.toString(0));
+                        toast.show();
+                    }
                 }
             }
         });

@@ -1,5 +1,6 @@
 package com.williamgomez.notafinal;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -25,12 +27,27 @@ public class MainActivity extends ActionBarActivity {
         final Button bcalcular = (Button) findViewById(R.id.bcalcular);
         final TextView ttotal= (TextView) findViewById(R.id.ttotal);
 
+        Context context = getApplicationContext();
+        CharSequence text = "Ingrese todos los campos";
+        int duration = Toast.LENGTH_SHORT;
+
+        final Toast toast = Toast.makeText(context, text, duration);
+
+
         bcalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ttotal.setText(Float.toString( (float)0.25*(Float.parseFloat(nota1.getText().toString())+Float.parseFloat(nota2.getText().toString())+Float.parseFloat(nota3.getText().toString())+Float.parseFloat(nota4.getText().toString()))  ));
+                if(!nota1.getText().toString().isEmpty() && !nota2.getText().toString().isEmpty() && !nota3.getText().toString().isEmpty() && !nota4.getText().toString().isEmpty() ){
+                    ttotal.setText(Float.toString( (float)0.25*(Float.parseFloat(nota1.getText().toString())+Float.parseFloat(nota2.getText().toString())+Float.parseFloat(nota3.getText().toString())+Float.parseFloat(nota4.getText().toString()))  ));
+                }
+                else{
+                    ttotal.setText(Float.toString(0));
+                    toast.show();
+                }
             }
         });
+
+
 
     }
 
