@@ -37,8 +37,10 @@ public class MainActivity extends ActionBarActivity {
 
         final Toast toast = Toast.makeText(context, text, duration);
 
-
-        
+        eradio.setVisibility(View.INVISIBLE);
+        elado.setVisibility(View.INVISIBLE);
+        ealtura.setVisibility(View.INVISIBLE);
+        ebase.setVisibility(View.INVISIBLE);
 
         bcal.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -82,6 +84,40 @@ public class MainActivity extends ActionBarActivity {
                         toast.show();
                     }
                 }
+            }
+        });
+
+
+        rtriang.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                eradio.setVisibility(View.INVISIBLE);
+                elado.setVisibility(View.INVISIBLE);
+                ealtura.setVisibility(View.VISIBLE);
+                ebase.setVisibility(View.VISIBLE);
+            }
+        });
+        rcirc.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                eradio.setVisibility(View.VISIBLE);
+                elado.setVisibility(View.INVISIBLE);
+                ealtura.setVisibility(View.INVISIBLE);
+                ebase.setVisibility(View.INVISIBLE);
+            }
+        });
+        rrect.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                eradio.setVisibility(View.INVISIBLE);
+                elado.setVisibility(View.INVISIBLE);
+                ealtura.setVisibility(View.VISIBLE);
+                ebase.setVisibility(View.VISIBLE);
+            }
+        });
+        rcuad.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                eradio.setVisibility(View.INVISIBLE);
+                elado.setVisibility(View.VISIBLE);
+                ealtura.setVisibility(View.INVISIBLE);
+                ebase.setVisibility(View.INVISIBLE);
             }
         });
 
