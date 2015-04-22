@@ -38,6 +38,8 @@ public class MainActivity extends ActionBarActivity {
         final Toast toast = Toast.makeText(context, text, duration);
 
 
+        
+
         bcal.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 if(rtriang.isChecked()==true){
