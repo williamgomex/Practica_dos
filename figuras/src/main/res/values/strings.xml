@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Dosnumeros</string>
+
+    <string name="base">Base: </string>
+    <string name="altura">Altura: </string>
+    <string name="radio">Radio: </string>
+    <string name="lado">Lado: </string>
+    <string name="circulo">Circulo</string>
+    <string name="triang">Triangulo</string>
+    <string name="rect">Rectangulo</string>
+    <string name="cuadro">Cuadrado</string>
+    <string name="Total">Area:</string>
+    <string name="Ingrese">Ingrese valor</string>
+    <string name="calcular">Calcular</string>
+    <string name="action_settings">Settings</string>
+</resources>
