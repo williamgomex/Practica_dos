@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
         CharSequence text = "Ingrese todos los campos";
         int duration = Toast.LENGTH_SHORT;
 
-        final Toast toast = Toast.makeText(context, text, duration);
+        final Toast toast = Toast.makeText(context,getResources().getString(R.string.comentario),duration);
 
 
 

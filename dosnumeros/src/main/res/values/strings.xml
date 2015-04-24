@@ -10,5 +10,6 @@
     <string name="calcular">Calcular</string>
     <string name="Total">El total es:</string>
     <string name="Ingrese">Ingrese #</string>
+    <string name="comentario">Ingrese todos los campos</string>
     <string name="action_settings">Settings</string>
 </resources>
