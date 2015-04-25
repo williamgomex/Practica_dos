@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Dosnumeros</string>
-
     <string name="numero1">Número 1:</string>
     <string name="numero2">Número 2:</string>
     <string name="suma">Suma</string>
@@ -10,6 +9,6 @@
     <string name="calcular">Calcular</string>
     <string name="Total">El total es:</string>
     <string name="Ingrese">Ingrese #</string>
-    <string name="comentario">Ingrese todos los campos</string>
+    <string name="comentario">Ingrese #</string>
     <string name="action_settings">Settings</string>
 </resources>

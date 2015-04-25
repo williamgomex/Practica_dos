@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dosnumeros</string>
+    <string name="numero1">Number 1:</string>
+    <string name="numero2">Number 2:</string>
+    <string name="suma">Sum</string>
+    <string name="resta">Subtraction</string>
+    <string name="multi">Multiplication</string>
+    <string name="divis">Division</string>
+    <string name="calcular">Compute</string>
+    <string name="Total">Total:</string>
+    <string name="Ingrese">Enter a #</string>
+    <string name="comentario">Enter all fields</string>
+    <string name="action_settings">Settings</string>
+</resources>
