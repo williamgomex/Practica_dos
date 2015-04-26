@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dosnumeros</string>
+    <string name="app_name">Figuras Geometricas</string>
 
     <string name="base">Base: </string>
     <string name="altura">Altura: </string>
@@ -12,5 +12,6 @@
     <string name="Total">Area:</string>
     <string name="Ingrese">Ingrese valor</string>
     <string name="calcular">Calcular</string>
+    <string name="comentario">Ingrese todos los campos</string>
     <string name="action_settings">Settings</string>
 </resources>

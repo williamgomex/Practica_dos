@@ -1,23 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Formulario</string>
-    <string name="nombre">Nombre</string>
-    <string name="hint_nombre">Digite el nombre</string>
-    <string name="correo">Correo</string>
-    <string name="hint_correo">Digite el correo</string>
-    <string name="tel">Telefono</string>
-    <string name="hint_tel">Digite el Telefono</string>
-    <string name="masculino">Masculino</string>
-    <string name="femenino">Femenino</string>
+    <string name="app_name">Form</string>
+    <string name="nombre">Name</string>
+    <string name="hint_nombre">Enter a name</string>
+    <string name="correo">E-mail</string>
+    <string name="hint_correo">Enter a e-mail</string>
+    <string name="tel">Telephone</string>
+    <string name="hint_tel">Enter a number</string>
+    <string name="masculino">Male</string>
+    <string name="femenino">Female</string>
     <string name="hobbies">Hobbies:</string>
-    <string name="hobby1">Leer</string>
-    <string name="hobby2">Ver series</string>
-    <string name="hobby3">Ver películas</string>
-    <string name="hobby4">Practicar deporte</string>
-    <string name="genero">Género:</string>
-    <string name="ciudad">Ciudad de nacimiento:</string>
-    <string name="fecha">Fecha de nacimiento:</string>
+    <string name="hobby1">Read</string>
+    <string name="hobby2">Watch series</string>
+    <string name="hobby3">Watch películas</string>
+    <string name="hobby4">Sports</string>
+    <string name="genero">Genre:</string>
+    <string name="ciudad">Birthplace:</string>
+    <string name="fecha">Birthday:</string>
     <string name="boton">OK</string>
-    <string name="comentario">Ingrese todos los campos</string>
+    <string name="comentario">Enter all fields</string>
+
     <string name="action_settings">Settings</string>
 
 

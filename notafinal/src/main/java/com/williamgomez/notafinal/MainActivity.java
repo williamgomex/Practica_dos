@@ -15,20 +15,27 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
+     EditText nota1;
+     EditText nota2;
+     EditText nota3;
+     EditText nota4;
+     Button bcalcular;
+     TextView ttotal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText nota1=(EditText) findViewById(R.id.nota1);
-        final EditText nota2=(EditText) findViewById(R.id.nota2);
-        final EditText nota3=(EditText) findViewById(R.id.nota3);
-        final EditText nota4=(EditText) findViewById(R.id.nota4);
-        final Button bcalcular = (Button) findViewById(R.id.bcalcular);
-        final TextView ttotal= (TextView) findViewById(R.id.ttotal);
+      nota1=(EditText) findViewById(R.id.nota1);
+      nota2=(EditText) findViewById(R.id.nota2);
+      nota3=(EditText) findViewById(R.id.nota3);
+      nota4=(EditText) findViewById(R.id.nota4);
+      bcalcular = (Button) findViewById(R.id.bcalcular);
+      ttotal= (TextView) findViewById(R.id.ttotal);
 
         Context context = getApplicationContext();
-        CharSequence text = "Ingrese todos los campos";
+        CharSequence text = getResources().getString(R.string.comentario);
         int duration = Toast.LENGTH_SHORT;
 
         final Toast toast = Toast.makeText(context, text, duration);
@@ -51,6 +58,19 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putString("total", ttotal.getText().toString());
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        ttotal.setText(savedInstanceState.getString("total"));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

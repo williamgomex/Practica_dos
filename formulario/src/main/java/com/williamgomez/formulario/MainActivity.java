@@ -22,37 +22,60 @@ public class MainActivity extends ActionBarActivity {
     private int year;
     private int month;
     private int day;
+    Spinner sciudad;
+    RadioButton mascu;
+    RadioButton femen;
+    DatePicker fecha;
+    EditText eNombre;
+    EditText eCorreo;
+    EditText eTel;
+    TextView tNombre;
+    TextView tTel;
+    TextView tCorreo;
+    TextView tHobbies;
+    TextView tCiudad;
+    TextView tGenero;
+    TextView tFecha;
+
+    CheckBox hobby1;
+    CheckBox hobby2;
+    CheckBox hobby3;
+    CheckBox hobby4;
+
+    Button bOk;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Spinner sciudad = (Spinner) findViewById(R.id.sciudad);
-        final RadioButton mascu = (RadioButton) findViewById(R.id.rmasc);
-        final RadioButton femen = (RadioButton) findViewById(R.id.rfem);
-        final DatePicker fecha = (DatePicker) findViewById(R.id.datef);
-        final EditText eNombre = (EditText) findViewById(R.id.eNombre);
-        final EditText eCorreo = (EditText) findViewById(R.id.eCorreo);
-        final EditText eTel = (EditText) findViewById(R.id.eTel);
+        sciudad = (Spinner) findViewById(R.id.sciudad);
+        mascu = (RadioButton) findViewById(R.id.rmasc);
+        femen = (RadioButton) findViewById(R.id.rfem);
+        fecha = (DatePicker) findViewById(R.id.datef);
+        eNombre = (EditText) findViewById(R.id.eNombre);
+        eCorreo = (EditText) findViewById(R.id.eCorreo);
+        eTel = (EditText) findViewById(R.id.eTel);
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.ciudades, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         sciudad.setAdapter(adapter);
-        final TextView tNombre = (TextView) findViewById(R.id.tNombre);
-        final TextView tTel = (TextView) findViewById(R.id.tTel);
-        final TextView tCorreo = (TextView) findViewById(R.id.tCorreo);
-        final TextView tHobbies = (TextView) findViewById(R.id.tHobbies);
-        final TextView tCiudad = (TextView) findViewById(R.id.tCiudad);
-        final TextView tGenero = (TextView) findViewById(R.id.tGenero);
-        final TextView tFecha = (TextView) findViewById(R.id.tFecha);
+        tNombre = (TextView) findViewById(R.id.tNombre);
+        tTel = (TextView) findViewById(R.id.tTel);
+        tCorreo = (TextView) findViewById(R.id.tCorreo);
+        tHobbies = (TextView) findViewById(R.id.tHobbies);
+        tCiudad = (TextView) findViewById(R.id.tCiudad);
+        tGenero = (TextView) findViewById(R.id.tGenero);
+        tFecha = (TextView) findViewById(R.id.tFecha);
 
-        final CheckBox hobby1 = (CheckBox) findViewById(R.id.hobby1);
-        final CheckBox hobby2 = (CheckBox) findViewById(R.id.hobby2);
-        final CheckBox hobby3 = (CheckBox) findViewById(R.id.hobby3);
-        final CheckBox hobby4 = (CheckBox) findViewById(R.id.hobby4);
+        hobby1 = (CheckBox) findViewById(R.id.hobby1);
+        hobby2 = (CheckBox) findViewById(R.id.hobby2);
+        hobby3 = (CheckBox) findViewById(R.id.hobby3);
+        hobby4 = (CheckBox) findViewById(R.id.hobby4);
 
-        final Button bOk = (Button) findViewById(R.id.boton);
+        bOk = (Button) findViewById(R.id.boton);
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +119,34 @@ public class MainActivity extends ActionBarActivity {
                 tCiudad.setText(aciudades[(int)sciudad.getSelectedItemId()]);
             }
         });
+
+    }
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putString("nombre", tNombre.getText().toString());
+        savedInstanceState.putString("correo", tCorreo.getText().toString());
+        savedInstanceState.putString("telefono", tTel.getText().toString());
+        savedInstanceState.putString("genero", tGenero.getText().toString());
+        savedInstanceState.putString("ciudad", tCiudad.getText().toString());
+        savedInstanceState.putString("hobbies", tHobbies.getText().toString());
+        savedInstanceState.putString("fecha", tFecha.getText().toString());
+
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        tNombre.setText(savedInstanceState.getString("nombre"));
+        tCorreo.setText(savedInstanceState.getString("correo"));
+        tTel.setText(savedInstanceState.getString("telefono"));
+        tGenero.setText(savedInstanceState.getString("genero"));
+        tCiudad.setText(savedInstanceState.getString("ciudad"));
+        tHobbies.setText(savedInstanceState.getString("hobbies"));
+        tFecha.setText(savedInstanceState.getString("fecha"));
 
     }
 

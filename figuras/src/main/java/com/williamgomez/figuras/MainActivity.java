@@ -14,25 +14,34 @@ import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    EditText ebase;
+    EditText eradio;
+    EditText ealtura;
+    EditText elado;
+    RadioButton rtriang;
+    RadioButton rrect;
+    RadioButton rcuad;
+    RadioButton rcirc;
+    TextView ttotal;
+    Button bcal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText ebase = (EditText) findViewById(R.id.ebase);
-        final EditText eradio = (EditText) findViewById(R.id.eradio);
-        final EditText ealtura = (EditText) findViewById(R.id.ealtura);
-        final EditText elado = (EditText) findViewById(R.id.elado);
-        final RadioButton rtriang= (RadioButton) findViewById(R.id.rtrian);
-        final RadioButton rrect= (RadioButton) findViewById(R.id.rrect);
-        final RadioButton rcuad= (RadioButton) findViewById(R.id.rcuad);
-        final RadioButton rcirc= (RadioButton) findViewById(R.id.rcirc);
-        final TextView ttotal = (TextView) findViewById(R.id.ttotal);
-        final Button bcal = (Button) findViewById(R.id.bcalcular);
+        ebase = (EditText) findViewById(R.id.ebase);
+        eradio = (EditText) findViewById(R.id.eradio);
+        ealtura = (EditText) findViewById(R.id.ealtura);
+        elado = (EditText) findViewById(R.id.elado);
+        rtriang= (RadioButton) findViewById(R.id.rtrian);
+        rrect= (RadioButton) findViewById(R.id.rrect);
+        rcuad= (RadioButton) findViewById(R.id.rcuad);
+        rcirc= (RadioButton) findViewById(R.id.rcirc);
+        ttotal = (TextView) findViewById(R.id.ttotal);
+        bcal = (Button) findViewById(R.id.bcalcular);
 
         Context context = getApplicationContext();
-        CharSequence text = "Ingrese todos los campos";
+        CharSequence text = getResources().getString(R.string.comentario);
         int duration = Toast.LENGTH_SHORT;
 
         final Toast toast = Toast.makeText(context, text, duration);
@@ -123,6 +132,50 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putString("total",ttotal.getText().toString());
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        ttotal.setText(savedInstanceState.getString("total"));
+
+        if(rtriang.isChecked()==true)
+        {
+                eradio.setVisibility(View.INVISIBLE);
+                elado.setVisibility(View.INVISIBLE);
+                ealtura.setVisibility(View.VISIBLE);
+                ebase.setVisibility(View.VISIBLE);
+        }
+        if(rcirc.isChecked()==true)
+        {
+                eradio.setVisibility(View.VISIBLE);
+                elado.setVisibility(View.INVISIBLE);
+                ealtura.setVisibility(View.INVISIBLE);
+                ebase.setVisibility(View.INVISIBLE);
+        }
+
+        if(rrect.isChecked()==true)
+        {
+            eradio.setVisibility(View.INVISIBLE);
+            elado.setVisibility(View.INVISIBLE);
+            ealtura.setVisibility(View.VISIBLE);
+            ebase.setVisibility(View.VISIBLE);
+        }
+        if(rcuad.isChecked()==true)
+        {
+                eradio.setVisibility(View.INVISIBLE);
+                elado.setVisibility(View.VISIBLE);
+                ealtura.setVisibility(View.INVISIBLE);
+                ebase.setVisibility(View.INVISIBLE);
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

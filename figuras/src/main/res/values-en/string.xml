@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Geometric figures</string>
+
+    <string name="base">Base: </string>
+    <string name="altura">Height: </string>
+    <string name="radio">Radius: </string>
+    <string name="lado">Side: </string>
+    <string name="circulo">Circle</string>
+    <string name="triang">Triangle</string>
+    <string name="rect">Rectangle</string>
+    <string name="cuadro">Square</string>
+    <string name="Total">Area:</string>
+    <string name="Ingrese">Enter a value</string>
+    <string name="calcular">Compute</string>
+    <string name="comentario">Enter all fields</string>
+    <string name="action_settings">Settings</string>
+</resources>

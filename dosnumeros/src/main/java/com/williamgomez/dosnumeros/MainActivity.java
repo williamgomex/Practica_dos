@@ -16,18 +16,30 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
+    EditText enumero1;
+    EditText enumero2;
+    RadioButton rsuma;
+    RadioButton rresta;
+    RadioButton rmul;
+    RadioButton rdiv;
+    Button bcalcular;
+    TextView ttotal;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final EditText enumero1=(EditText) findViewById(R.id.enumero1);
-        final EditText enumero2=(EditText) findViewById(R.id.enumero2);
-        final RadioButton rsuma=(RadioButton) findViewById(R.id.rsuma);
-        final RadioButton rresta=(RadioButton) findViewById(R.id.rresta);
-        final RadioButton rmul=(RadioButton) findViewById(R.id.rmul);
-        final RadioButton rdiv=(RadioButton) findViewById(R.id.rdiv);
-        final Button bcalcular= (Button) findViewById(R.id.bcalcular);
-        final TextView ttotal= (TextView) findViewById(R.id.ttotal);
+
+        enumero1=(EditText) findViewById(R.id.enumero1);
+        enumero2=(EditText) findViewById(R.id.enumero2);
+        rsuma=(RadioButton) findViewById(R.id.rsuma);
+        rresta=(RadioButton) findViewById(R.id.rresta);
+        rmul=(RadioButton) findViewById(R.id.rmul);
+        rdiv=(RadioButton) findViewById(R.id.rdiv);
+        bcalcular= (Button) findViewById(R.id.bcalcular);
+        ttotal= (TextView) findViewById(R.id.ttotal);
+
 
         Context context = getApplicationContext();
         CharSequence text = "Ingrese todos los campos";
@@ -62,7 +74,6 @@ public class MainActivity extends ActionBarActivity {
                     toast.show();
                 }
 
-
             }
         });
 
@@ -70,6 +81,19 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putString("total",ttotal.getText().toString());
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        ttotal.setText(savedInstanceState.getString("total"));
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
