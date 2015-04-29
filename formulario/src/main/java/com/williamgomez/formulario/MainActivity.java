@@ -85,10 +85,10 @@ public class MainActivity extends ActionBarActivity {
                 tTel.setText(eTel.getText());
 
                 if(mascu.isChecked()==true){
-                    tGenero.setText("Masculino");
+                    tGenero.setText(getResources().getString(R.string.masculino));
                 }
                 if(femen.isChecked()==true){
-                    tGenero.setText("Femenino");
+                    tGenero.setText(getResources().getString(R.string.femenino));
                 }
                 String hobbies = new String();
 

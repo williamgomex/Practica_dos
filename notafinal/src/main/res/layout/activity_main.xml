@@ -14,29 +14,15 @@
         android:layout_marginBottom="10dp">
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Textview"
             android:layout_weight="1"
-            android:text="@string/nota1"
-            android:textSize="25dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"/>
+            android:text="@string/nota1"/>
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Edittext"
             android:layout_weight="1"
-            android:textSize="15dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"
             android:hint="@string/Ingrese"
-            android:inputType="numberDecimal"
-            android:id="@+id/nota1"
-            android:textColorHint="@color/lightgray"/>
+            android:id="@+id/nota1"/>
 
     </LinearLayout>
 
@@ -47,29 +33,15 @@
         android:layout_marginBottom="10dp">
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Textview"
             android:layout_weight="1"
-            android:text="@string/nota2"
-            android:textSize="25dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"/>
+            android:text="@string/nota2"/>
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Edittext"
             android:layout_weight="1"
-            android:textSize="15dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"
             android:hint="@string/Ingrese"
-            android:inputType="numberDecimal"
-            android:id="@+id/nota2"
-            android:textColorHint="@color/lightgray"/>
+            android:id="@+id/nota2"/>
 
     </LinearLayout>
 
@@ -80,29 +52,15 @@
         android:layout_marginBottom="10dp">
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Textview"
             android:layout_weight="1"
-            android:text="@string/nota3"
-            android:textSize="25dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"/>
+            android:text="@string/nota3"/>
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Edittext"
             android:layout_weight="1"
-            android:textSize="15dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"
             android:hint="@string/Ingrese"
-            android:inputType="numberDecimal"
-            android:id="@+id/nota3"
-            android:textColorHint="@color/lightgray"/>
+            android:id="@+id/nota3"/>
 
     </LinearLayout>
 
@@ -113,29 +71,15 @@
         android:layout_marginBottom="40dp">
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Textview"
             android:layout_weight="1"
-            android:text="@string/nota4"
-            android:textSize="25dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"/>
+            android:text="@string/nota4"/>
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Edittext"
             android:layout_weight="1"
-            android:textSize="15dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"
             android:hint="@string/Ingrese"
-            android:inputType="numberDecimal"
-            android:id="@+id/nota4"
-            android:textColorHint="@color/lightgray"/>
+            android:id="@+id/nota4"/>
 
     </LinearLayout>
 
@@ -162,25 +106,13 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Textview"
             android:layout_weight="1"
-            android:text="@string/notaf"
-            android:textSize="25dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"/>
+            android:text="@string/notaf"/>
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/Textview"
             android:layout_weight="1"
-            android:textSize="25dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/background_material_light"
             android:id="@+id/ttotal"/>
 
     </LinearLayout>

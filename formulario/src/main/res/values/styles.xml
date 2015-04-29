@@ -5,4 +5,26 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Textviewtitulo">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Textviewmuestra" parent="Textviewtitulo">
+
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginBottom">5sp</item>
+    </style>
+
+    <style name="Edittext" parent="Textviewtitulo">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Radiobutton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

@@ -23,18 +23,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
                     android:text="@string/nombre"
-                    android:textSize="20dp"
-                    android:textColor="@color/blue"
+                    style="@style/Textviewtitulo"
                     android:layout_weight="1.8"/>
 
                 <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/Edittext"
                     android:hint="@string/hint_nombre"
-                    android:textSize="20dp"
                     android:inputType="textPersonName"
                     android:layout_weight="1"
                     android:id="@+id/eNombre"/>
@@ -47,18 +42,13 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/Textviewtitulo"
                     android:text="@string/correo"
-                    android:textSize="20dp"
-                    android:textColor="@color/blue"
                     android:layout_weight="1.8"/>
 
                 <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/Edittext"
                     android:hint="@string/hint_correo"
-                    android:textSize="20dp"
                     android:inputType="textEmailAddress"
                     android:layout_weight="1"
                     android:id="@+id/eCorreo"/>
@@ -69,29 +59,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/Textviewtitulo"
                     android:text="@string/tel"
-                    android:textSize="20dp"
-                    android:textColor="@color/blue"
                     android:layout_weight="1.8"/>
 
                 <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/Edittext"
                     android:hint="@string/hint_tel"
-                    android:textSize="20dp"
                     android:inputType="phone"
                     android:layout_weight="1"
                     android:id="@+id/eTel"/>
             </LinearLayout>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
                 android:text="@string/genero"
-                android:textSize="20dp"
-                android:textColor="@color/blue"/>
+                style="@style/Textviewtitulo"/>
 
 
             <RadioGroup
@@ -99,25 +81,20 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Radiobutton"
                     android:text="@string/masculino"
                     android:id="@+id/rmasc"/>
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Radiobutton"
                     android:text="@string/femenino"
                     android:id="@+id/rfem"/>
 
             </RadioGroup>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:text="@string/ciudad"
-                android:textSize="20dp"
-                android:textColor="@color/blue"/>
+                style="@style/Textviewtitulo"
+                android:text="@string/ciudad"/>
 
             <Spinner
                 android:layout_width="wrap_content"
@@ -127,39 +104,30 @@
             </Spinner>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:text="@string/hobbies"
-                android:textSize="20dp"
-                android:textColor="@color/blue"/>
+                style="@style/Textviewtitulo"
+                android:text="@string/hobbies"/>
 
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Radiobutton"
                 android:text="@string/hobby1"
                 android:id="@+id/hobby1"/>
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Radiobutton"
                 android:text="@string/hobby2"
                 android:id="@+id/hobby2"/>
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Radiobutton"
                 android:text="@string/hobby3"
                 android:id="@+id/hobby3"/>
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Radiobutton"
                 android:text="@string/hobby4"
                 android:id="@+id/hobby4"/>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                style="@style/Textviewtitulo"
                 android:text="@string/fecha"
-                android:textSize="20dp"
-                android:textColor="@color/blue"/>
+                />
 
             <DatePicker
                 android:layout_width="fill_parent"
@@ -178,67 +146,39 @@
                 android:id="@+id/boton"/>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                style="@style/Textviewmuestra"
                 android:text="@string/nombre"
-                android:textSize="20dp"
-                android:id="@+id/tNombre"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tNombre"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Textviewmuestra"
                 android:text="@string/correo"
-                android:textSize="20dp"
-                android:id="@+id/tCorreo"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tCorreo"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
+                style="@style/Textviewmuestra"
                 android:text="@string/tel"
-                android:id="@+id/tTel"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tTel"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Textviewmuestra"
                 android:text="@string/genero"
-                android:textSize="20dp"
-                android:id="@+id/tGenero"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tGenero"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Textviewmuestra"
                 android:text="@string/ciudad"
-                android:textSize="20dp"
-                android:id="@+id/tCiudad"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tCiudad"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
+                style="@style/Textviewmuestra"
                 android:text="@string/hobbies"
-                android:id="@+id/tHobbies"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tHobbies"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Textviewmuestra"
                 android:text="@string/fecha"
-                android:textSize="20dp"
-                android:id="@+id/tFecha"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5sp"/>
+                android:id="@+id/tFecha"/>
 
 
 
