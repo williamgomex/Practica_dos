@@ -7,7 +7,14 @@
     <string name="nota4">Nota 4:</string>
     <string name="notaf">Nota Final:</string>
     <string name="bok">Calcular</string>
+    <string name="bconfig">Configurar</string>
     <string name="Ingrese">Ingrese la nota</string>
+    <string name="Ingresep">Ingrese el %</string>
     <string name="comentario">Ingrese todas las notas</string>
+    <string name="tabout">Desarrollado por William Gómez</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_aboutactivity">Aboutactivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 </resources>

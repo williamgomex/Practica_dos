@@ -8,8 +8,10 @@
     <string name="nota4">Grade 4:</string>
     <string name="notaf">Final Grade:</string>
     <string name="bok">Compute</string>
+    <string name="bconfig">Configure</string>
+    <string name="Ingresep">Enter the %</string>
     <string name="Ingrese">Enter a grade</string>
     <string name="comentario">Enter all grades</string>
-
+    <string name="tabout">Developed by William Gómez</string>
     <string name="action_settings">Settings</string>
 </resources>
